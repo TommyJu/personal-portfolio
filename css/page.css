@@ -1,0 +1,31 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: large;
+    color: white;
+}
+
+h3 {
+
+}
+
+#hero-section {
+    width: 40%;
+    padding: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#scrollable-section {
+    width: 60%;
+}
