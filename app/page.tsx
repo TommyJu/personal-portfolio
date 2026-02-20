@@ -1,10 +1,10 @@
-import "@/css/page.css";
+import "./page.css";
+import ExternalLinksAndIcons from "@/components/NavigationPanel/ExternalLinksAndIcons/ExternalLinksAndIcons";
 
 export default function Home() {
   return (
     <main>
-      {/* Fixed hero section */}
-      <section id="hero-section">
+      <section id="navigation-panel">
         <div>
           <h1>Tommy Ju</h1>
           <h2>Software Developer</h2>
@@ -15,9 +15,9 @@ export default function Home() {
           maxime earum atque, nisi ullam fugiat ratione corporis doloribus, modi
           nesciunt in!
         </p>
+        <ExternalLinksAndIcons/>
       </section>
 
-      {/* Scrollable content section */}
       <section id="scrollable-section">
         <h3>About</h3>
         <h3>Education</h3>
