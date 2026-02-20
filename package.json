@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "clean-icons": "svgo --config=svgo.config.js ./icons/*.svg"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -14,12 +15,14 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "svgo": "^4.0.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

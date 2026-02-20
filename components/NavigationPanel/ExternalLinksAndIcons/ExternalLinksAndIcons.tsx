@@ -1,7 +1,8 @@
-import GithubIcon from "@/components/icons/GithubIcon";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
-import DevIcon from "@/components/icons/DevIcon";
-import ResumeIcon from "@/components/icons/ResumeIcon";
+import GithubIcon from "@/icons/github.svg";
+import LinkedInIcon from "@/icons/linkedin.svg";
+import DevIcon from "@/icons/dev.svg";
+import ResumeIcon from "@/icons/resume.svg";
+import "@/css/icon.css"
 
 function ExternalLinksAndIcons() {
   const ICON_SIZE = 48;
@@ -10,22 +11,22 @@ function ExternalLinksAndIcons() {
     <div className="flex gap-8 text-center">
       {/* GitHub */}
       <a href="https://github.com/TommyJu" target="_blank">
-        <GithubIcon size={ICON_SIZE} />
+        <GithubIcon width={ICON_SIZE} height={ICON_SIZE} className="icon"/>
       </a>
 
       {/* LinkedIn */}
       <a href="https://www.linkedin.com/in/tommyju/" target="_blank">
-        <LinkedInIcon size={ICON_SIZE} />
+        <LinkedInIcon width={ICON_SIZE} height={ICON_SIZE} className="icon"/>
       </a>
 
       {/* Dev.to */}
       <a href="https://dev.to/tommy_ju" target="_blank">
-        <DevIcon size={ICON_SIZE} />
+        <DevIcon width={ICON_SIZE} height={ICON_SIZE} className="icon"/>
       </a>
 
       {/* Resume */}
-      <a href="resume_tommy_ju.pdf" target="_blank" >
-      <ResumeIcon size={ICON_SIZE}/>
+      <a href="resume_tommy_ju.pdf" target="_blank">
+      <ResumeIcon width={ICON_SIZE} height={ICON_SIZE} className="icon"/>
       </a>
     </div>
   );

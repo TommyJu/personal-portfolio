@@ -1,4 +1,4 @@
-import "./page.css";
+import "@/css/page.css";
 import ExternalLinksAndIcons from "@/components/NavigationPanel/ExternalLinksAndIcons/ExternalLinksAndIcons";
 
 export default function Home() {
