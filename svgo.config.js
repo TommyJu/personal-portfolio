@@ -1,12 +1,30 @@
 module.exports = {
   plugins: [
     {
-      name: 'removeAttrs',
-      params: { attrs: '(fill|stroke)' }, // removes hardcoded fills and strokes
+      name: "preset-default",
+      params: {
+        overrides: {
+          removeViewBox: false, // keep viewBox for proper scaling
+        },
+      },
     },
+
+    // Remove hard-coded fill, stroke, and style attributes
     {
-      name: 'preset-default',
-      params: { overrides: { removeViewBox: false } }, // keep viewBox for scaling
+      name: "removeAttrs",
+      params: {
+        attrs: "(fill|stroke|style)",
+      },
+    },
+
+    // Add fill="currentColor" to the root <svg>
+    {
+      name: "addAttributesToSVGElement",
+      params: {
+        attributes: [
+          { fill: "currentColor" }
+        ],
+      },
     },
   ],
 };

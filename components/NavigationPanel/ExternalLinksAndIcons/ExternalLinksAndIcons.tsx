@@ -28,6 +28,7 @@ function ExternalLinksAndIcons() {
       <a href="resume_tommy_ju.pdf" target="_blank">
       <ResumeIcon width={ICON_SIZE} height={ICON_SIZE} className="icon"/>
       </a>
+
     </div>
   );
 }

@@ -1,10 +1,10 @@
 .icon {
-  fill: var(--color-foreground);
+  color: var(--color-foreground);
   transition: transform 0.2s ease, color 0.2s ease;
   cursor: pointer;
 }
 
 .icon:hover {
-  fill: white;
+  color: white;
   transform: scale(1.1);
 }
