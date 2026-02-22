@@ -1,5 +1,6 @@
 import "@/css/page.css";
-import ExternalLinksAndIcons from "@/components/NavigationPanel/ExternalLinksAndIcons/ExternalLinksAndIcons";
+import ExternalLinksAndIcons from "@/components/NavigationPanel/ExternalLinksAndIcons";
+import Nav from "@/components/NavigationPanel/Nav";
 
 export default function Home() {
   return (
@@ -15,14 +16,23 @@ export default function Home() {
           maxime earum atque, nisi ullam fugiat ratione corporis doloribus, modi
           nesciunt in!
         </p>
+        <Nav/>
         <ExternalLinksAndIcons/>
       </section>
 
       <section id="scrollable-section">
-        <h3>About</h3>
-        <h3>Education</h3>
-        <h3>Work Experience</h3>
-        <h3>Projects</h3>
+        <section id="about">
+          <h3>About</h3>
+        </section>
+        <section id="education">
+          <h3>Education</h3>
+        </section>
+        <section id="work-experience">
+          <h3>Work Experience</h3>
+        </section>
+        <section id="projects">
+          <h3>Projects</h3>
+        </section>
       </section>
     </main>
   );

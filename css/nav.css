@@ -1,0 +1,28 @@
+nav a {
+  color: #888;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  margin-bottom: 8px; /* space for underline */
+  display: inline-block;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;           /* underline at bottom of text */
+  width: 0;            /* start hidden */
+  height: 2px;         /* thickness of underline */
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav a.active {
+  color: white;
+}
+
+nav a.active::after {
+  width: 100%;         /* full underline width */
+}
