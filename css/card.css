@@ -3,6 +3,12 @@
     gap: 2rem;
     padding: 1rem;
     border: solid 1px white;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.card-container:hover {
+    opacity: 1;
 }
 
 .card-container-left {

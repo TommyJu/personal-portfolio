@@ -1,12 +1,26 @@
+"use client";
+
 import "@/css/page.css";
+import "@/css/pageFade.css";
 import ExternalLinksAndIcons from "@/components/NavigationPanel/ExternalLinksAndIcons";
 import Nav from "@/components/NavigationPanel/Nav";
 import Card from "@/components/ScrollableSection/Card";
 import educationData from "@/data/education";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    // defer setVisible to the next animation frame
+    const frame = requestAnimationFrame(() => {
+      setVisible(true);
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
   return (
-    <main>
+    <main className={`fade-page ${visible ? "visible" : ""}`}>
       <section id="navigation-panel">
         <div>
           <h1>Tommy Ju</h1>
@@ -18,8 +32,8 @@ export default function Home() {
           maxime earum atque, nisi ullam fugiat ratione corporis doloribus, modi
           nesciunt in!
         </p>
-        <Nav/>
-        <ExternalLinksAndIcons/>
+        <Nav />
+        <ExternalLinksAndIcons />
       </section>
 
       <section id="scrollable-section">
@@ -31,7 +45,6 @@ export default function Home() {
           {educationData.map((data) => (
             <Card key={data.title} {...data} />
           ))}
-
         </section>
         <section id="work-experience">
           <h3>Work Experience</h3>

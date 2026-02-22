@@ -14,7 +14,7 @@ const SECTION_CONTAINER_ID = "scrollable-section";
 export default function Nav() {
   const [activeSection, setActiveSection] = useState(SECTION_IDS[0]);
   // Adjust when a section is considered "active"
-  const ACTIVE_SECTION_THRESHOLD = 0.7;
+  const ACTIVE_SECTION_THRESHOLD = 0.5;
 
   // Reset scroll to top
   const resetScroll = () => {
