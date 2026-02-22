@@ -11,12 +11,14 @@ interface CardProps {
     isClickable?: boolean;
 };
 
-function Card({title, secondaryTitle, description, tags, date, imageSrc, isClickable = true} : CardProps) {
+function Card({title, secondaryTitle, description, tags, date, imageSrc, isClickable = false} : CardProps) {
   return (
     <div className="card-container">
         <div className="card-container-left">
             {date && (<p className='date'>{date}</p>)}
-            {imageSrc && (<Image src={imageSrc} width={50} height={50} className='image' alt=""/>)}
+            <div className="image-wrapper">
+                {imageSrc && (<Image src={imageSrc} fill className='image' alt=""/>)}
+            </div>
             
         </div>
         <div className="card-container-right">

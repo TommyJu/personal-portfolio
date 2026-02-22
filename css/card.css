@@ -1,24 +1,35 @@
 .card-container {
-
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    border: solid 1px white;
 }
 
 .card-container-left {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-container-right {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .title {
-
+    font-weight: bold;
+    font-size: larger;
+    color: white;
 }
 
 .secondary-title {
+    font-size: large;
+    font-style:italic;
 
 }
 
 .description {
+    margin-top: 1rem;
 
 }
 
@@ -28,8 +39,17 @@
 
 .tag {}
 
-.date {}
+.date {
+    white-space: nowrap;
+    margin-bottom: 1rem;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 120px;
+    height: 60px;
+}
 
 .image {
-  
+object-fit: cover;
 }
