@@ -1,6 +1,8 @@
 import "@/css/page.css";
 import ExternalLinksAndIcons from "@/components/NavigationPanel/ExternalLinksAndIcons";
 import Nav from "@/components/NavigationPanel/Nav";
+import Card from "@/components/ScrollableSection/Card";
+import educationData from "@/data/education";
 
 export default function Home() {
   return (
@@ -26,6 +28,10 @@ export default function Home() {
         </section>
         <section id="education">
           <h3>Education</h3>
+          {educationData.map((data) => (
+            <Card key={data.title} {...data} />
+          ))}
+
         </section>
         <section id="work-experience">
           <h3>Work Experience</h3>

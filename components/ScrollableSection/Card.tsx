@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import "@/css/card.css";
 
 interface CardProps {
     title?: string;
@@ -15,7 +16,7 @@ function Card({title, secondaryTitle, description, tags, date, imageSrc, isClick
     <div className="card-container">
         <div className="card-container-left">
             {date && (<p className='date'>{date}</p>)}
-            {imageSrc && (<Image src={imageSrc} className='image' alt=""/>)}
+            {imageSrc && (<Image src={imageSrc} width={50} height={50} className='image' alt=""/>)}
             
         </div>
         <div className="card-container-right">
@@ -28,7 +29,7 @@ function Card({title, secondaryTitle, description, tags, date, imageSrc, isClick
                 })}
             </div>
         </div>
-        
+
 
     </div>
   )
