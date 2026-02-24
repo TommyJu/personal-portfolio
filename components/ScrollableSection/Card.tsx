@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import "@/css/card.css";
+import LinkIcon from "@/icons/link.svg";
 
 interface CardProps {
   title?: string;
@@ -21,6 +22,8 @@ function Card({
   imageSrc,
   href,
 }: CardProps) {
+  const LINK_ICON_SIZE = 18;
+
   const content = (
     <div className="card-container">
       <div className="card-container-left">
@@ -31,7 +34,10 @@ function Card({
       </div>
 
       <div className="card-container-right">
-        {title && <h4 className="title">{title}</h4>}
+        <span className="title-and-icon-container">
+          {title && <h4 className="title">{title}</h4>}
+          {href && <LinkIcon width={LINK_ICON_SIZE} height={LINK_ICON_SIZE} className="link-icon"/>}
+        </span>
         {secondaryTitle && (
           <h5 className="secondary-title">{secondaryTitle}</h5>
         )}
