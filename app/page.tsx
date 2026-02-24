@@ -4,9 +4,11 @@ import "@/css/page.css";
 import "@/css/pageFade.css";
 import ExternalLinksAndIcons from "@/components/NavigationPanel/ExternalLinksAndIcons";
 import Nav from "@/components/NavigationPanel/Nav";
+import { useEffect, useState } from "react";
 import Card from "@/components/ScrollableSection/Card";
 import educationData from "@/data/education";
-import { useEffect, useState } from "react";
+import workExperienceData from "@/data/workExperience";
+import projectData from "@/data/projects";
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -48,9 +50,15 @@ export default function Home() {
         </section>
         <section id="work-experience">
           <h3>Work Experience</h3>
+          {workExperienceData.map((data) => (
+            <Card key={data.title} {...data} />
+          ))}
         </section>
         <section id="projects">
           <h3>Projects</h3>
+          {projectData.map((data) => (
+            <Card key={data.title} {...data} />
+          ))}
         </section>
       </section>
     </main>
