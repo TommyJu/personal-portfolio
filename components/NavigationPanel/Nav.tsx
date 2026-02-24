@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import "@/css/nav.css";
 
 const SECTION_IDS = Object.freeze([
@@ -13,51 +13,69 @@ const SECTION_CONTAINER_ID = "scrollable-section";
 // Nav component that responds to the current sectioned being viewed in a scrollable container
 export default function Nav() {
   const [activeSection, setActiveSection] = useState(SECTION_IDS[0]);
-  // Adjust when a section is considered "active"
-  const ACTIVE_SECTION_THRESHOLD = 0.5;
 
-  // Reset scroll to top
-  const resetScroll = () => {
-    const container = document.getElementById(SECTION_CONTAINER_ID);
+  // Helper functions for setting up Nav observer
+  const getContainer = useCallback(
+    () => document.getElementById(SECTION_CONTAINER_ID),
+    []
+  );
+
+  const getSectionElement = useCallback((id: string) => {
+    return document.getElementById(id);
+  }, []);
+
+  const resetScroll = useCallback(() => {
+    const container = getContainer();
     if (!container) return;
     requestAnimationFrame(() => {
       container.scrollTop = 0;
     });
-  };
+  }, [getContainer]);
 
-  // IntersectionObserver callback
-  const handleIntersections = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveSection(entry.target.id);
-      }
-    });
-  };
+  const handleIntersection = useCallback<IntersectionObserverCallback>(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    },
+    []
+  );
 
-  // Attach observer to each section
-  const observeSections = (observer: IntersectionObserver) => {
-    SECTION_IDS.forEach((id) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
-  };
+  const createObserver = useCallback(
+    (container: HTMLElement) =>
+      new IntersectionObserver(handleIntersection, {
+        root: container,
+        threshold: 0,
+        rootMargin: "0px 0px -80% 0px", // Create a fixed activation point by shrinking the bottom of the container
+      }),
+    [handleIntersection]
+  );
 
+  const observeAllSections = useCallback(
+    (observer: IntersectionObserver) => {
+      SECTION_IDS.forEach((id) => {
+        const el = getSectionElement(id);
+        if (el) observer.observe(el);
+      });
+    },
+    [getSectionElement]
+  );
+
+  // Setup observer
   useEffect(() => {
-    const container = document.getElementById(SECTION_CONTAINER_ID);
+    const container = getContainer();
     if (!container) return;
 
     resetScroll();
 
-    const observer = new IntersectionObserver(handleIntersections, {
-      root: container,
-      threshold: ACTIVE_SECTION_THRESHOLD,
-    });
-
-    observeSections(observer);
+    const observer = createObserver(container);
+    observeAllSections(observer);
 
     return () => observer.disconnect();
-  }, []);
-
+  }, [createObserver, observeAllSections, getContainer, resetScroll]);
+  
   return (
     <nav>
       <ul>

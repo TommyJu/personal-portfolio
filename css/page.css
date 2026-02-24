@@ -3,8 +3,6 @@ main {
   overflow: hidden;
   height: 100dvh;
   justify-content: center;
-  padding: 0 3rem;
-  gap: 2rem;
 }
 
 h1 {
@@ -30,17 +28,16 @@ h3 {
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
+  padding: 2rem;
 }
 
 #scrollable-section {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
   width: 60%;
-  padding: 2rem 0;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
-}
-
-#scrollable-section > section {
-  min-height: 1000px;
+  gap: 6rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
