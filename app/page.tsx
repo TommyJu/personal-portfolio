@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={`fade-page ${visible ? "visible" : ""}`}>
+    <main id="scrollable-container" className={`fade-page ${visible ? "visible" : ""}`}>
       <section id="navigation-panel">
         <div>
           <h1>Tommy Ju</h1>
@@ -38,7 +38,7 @@ export default function Home() {
         <ExternalLinksAndIcons />
       </section>
 
-      <section id="scrollable-section">
+      <section id="content">
         <section id="about">
           <h3>About</h3>
         </section>
