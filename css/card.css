@@ -4,17 +4,22 @@
   padding: 1rem;
   opacity: 1;
   margin-bottom: 3rem;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 
 .card-container:hover {
     background: rgb(var(--primary) / 0.1);
+    
     .title, .link-icon {
         color: rgb(var(--secondary));
     };
     .description {
         color: white;
     }
+}
+
+.card-container, .title, .link-icon, .description, .card-container:hover {
+    transition: 0.5s;
 }
 
 .card-container-left {

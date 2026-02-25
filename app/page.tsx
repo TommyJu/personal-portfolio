@@ -9,6 +9,7 @@ import Card from "@/components/ScrollableSection/Card";
 import educationData from "@/data/education";
 import workExperienceData from "@/data/workExperience";
 import projectData from "@/data/projects";
+import { aboutMeParagraphs, aboutMeShortSummary } from "@/data/aboutMe";
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -22,17 +23,17 @@ export default function Home() {
   }, []);
 
   return (
-    <main id="scrollable-container" className={`fade-page ${visible ? "visible" : ""}`}>
+    <main
+      id="scrollable-container"
+      className={`fade-page ${visible ? "visible" : ""}`}
+    >
       <section id="navigation-panel">
         <div>
           <h1>Tommy Ju</h1>
-          <h2>Software Developer</h2>
+          <h2>Software Developer based in Vancouver, BC</h2>
         </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-          error eos sed. Quaerat error laboriosam commodi nobis, consequatur
-          maxime earum atque, nisi ullam fugiat ratione corporis doloribus, modi
-          nesciunt in!
+          <strong>{aboutMeShortSummary}</strong>
         </p>
         <Nav />
         <ExternalLinksAndIcons />
@@ -41,6 +42,11 @@ export default function Home() {
       <section id="content">
         <section id="about">
           <h3>About</h3>
+          <div className="about-me-text-wrapper">
+            {aboutMeParagraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
         </section>
         <section id="education">
           <h3>Education</h3>

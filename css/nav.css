@@ -26,3 +26,7 @@ nav a.active, nav a:hover {
 nav a.active::after {
   width: 100%;         /* full underline width */
 }
+
+nav a:hover, nav a {
+  transition: 0.5s;
+}
