@@ -30,7 +30,10 @@ export default function Home() {
       <section id="navigation-panel">
         <div>
           <h1>Tommy Ju</h1>
-          <h2>Software Developer based in <span className="whitespace-nowrap">Vancouver, BC</span></h2>
+          <h2>
+            Software Developer based in{" "}
+            <span className="whitespace-nowrap">Vancouver, BC</span>
+          </h2>
         </div>
         <p>
           <strong>{aboutMeShortSummary}</strong>
@@ -41,7 +44,7 @@ export default function Home() {
 
       <section id="content">
         <section id="about">
-          <h3>About</h3>
+            <h3>About</h3>
           <div className="about-me-text-wrapper">
             {aboutMeParagraphs.map((p, i) => (
               <p key={i}>{p}</p>

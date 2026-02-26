@@ -90,3 +90,22 @@
     flex-wrap: nowrap;
     justify-content: space-between;
 }
+
+@media (max-width: 600px) {
+    .card-container {
+        flex-direction: column-reverse;
+    }
+    .card-container-left {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 400px) {
+    .card-container-left img, .image-wrapper {
+        display: none;
+    }
+    .card-container {
+        gap: 0.8rem
+    }
+}
