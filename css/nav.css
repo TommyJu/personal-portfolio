@@ -28,5 +28,5 @@ nav a.active::after {
 }
 
 nav a:hover, nav a {
-  transition: 0.5s;
+  transition: 0.3s;
 }

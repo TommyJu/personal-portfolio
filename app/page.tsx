@@ -5,7 +5,7 @@ import "@/css/pageFade.css";
 import ExternalLinksAndIcons from "@/components/NavigationPanel/ExternalLinksAndIcons";
 import Nav from "@/components/NavigationPanel/Nav";
 import { useEffect, useState } from "react";
-import Card from "@/components/ScrollableSection/Card";
+import Card from "@/components/Content/Card";
 import educationData from "@/data/education";
 import workExperienceData from "@/data/workExperience";
 import projectData from "@/data/projects";
@@ -30,7 +30,7 @@ export default function Home() {
       <section id="navigation-panel">
         <div>
           <h1>Tommy Ju</h1>
-          <h2>Software Developer based in Vancouver, BC</h2>
+          <h2>Software Developer based in <span className="whitespace-nowrap">Vancouver, BC</span></h2>
         </div>
         <p>
           <strong>{aboutMeShortSummary}</strong>
