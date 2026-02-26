@@ -23,12 +23,13 @@ function Card({
   href,
 }: CardProps) {
   const LINK_ICON_SIZE = 18;
+  const IMAGE_WRAPPER_WIDTH_IN_PX = "120px";
 
   const content = (
     <div className="card-container">
       <div className="card-container-left">
         <div className="image-wrapper">
-          {imageSrc && <Image src={imageSrc} fill className="image" alt="" />}
+          {imageSrc && <Image src={imageSrc} fill className="image" alt="" sizes={IMAGE_WRAPPER_WIDTH_IN_PX}/>}
         </div>
         {date && <p className="date">{date}</p>}
       </div>
