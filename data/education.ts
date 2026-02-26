@@ -19,7 +19,7 @@ const educationData: EducationEntry[] = [
     {
        title: "Bachelor of Science",
         secondaryTitle: "University of British Columbia",
-        description: "Studied at UBC for two years while majoring in Mathematics. Transferred to BCIT for a hands-on experience in software development.",
+        description: "Studied at UBC for two years while majoring in Mathematics before transferring to BCIT for a hands-on experience in software development.",
         date: "Sept 2020 - Feb 2022",
         imageSrc: "/education-images/ubc.png",
         href: "https://www.ubc.ca/about/" 

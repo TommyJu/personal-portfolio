@@ -36,7 +36,7 @@ const projectData: ProjectEntry[] = [
   },
    {
     title: "Space Invaders",
-    description: "This is my version of Space Invaders built using the Pygame library. This game is the first step of many toward my goal of becoming a capable software developer through project-based learning. I wanted to create something that others enjoy playing while gaining experience creating clean and modular code.",
+    description: "This is my version of Space Invaders built using the Pygame library. This game is the first step toward my goal of becoming a capable software developer through project-based learning. I wanted to create something that others enjoy playing while gaining experience creating clean and modular code.",
     date: "Sept 2025",
     imageSrc: "/project-images/space_invaders.png",
     tags: ["Python"],
@@ -60,7 +60,7 @@ const projectData: ProjectEntry[] = [
   },
   {
     title: "Good Books (Open Source Contribution)",
-    description: "Good Books is an accounting System built in ASP.NET DotNetCore, ReactJS, MobX. Resolved three issues via pull request and merge.",
+    description: "Good Books is an accounting system built in ASP.NET DotNetCore, ReactJS, MobX. Resolved three issues via pull request and merge.",
     date: "Mar 2025",
     imageSrc: "/project-images/good_books.png",
     tags: ["C#", ".NET", "SQL server", "Blazor", "Docker", "MVC Architecture"],
