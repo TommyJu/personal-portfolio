@@ -4,7 +4,6 @@ import { useEffect, useState, useCallback } from "react";
 export default function useScrollSpy(
   sectionIds: string[],
   scrollContainerId: string,
-  navPanelId?: string
 ) {
   const [activeSection, setActiveSection] = useState(sectionIds[0]);
 
@@ -18,44 +17,30 @@ export default function useScrollSpy(
     []
   );
 
-  // Get DOM elements
-  const getContainer = useCallback(
-    () => document.getElementById(scrollContainerId),
-    [scrollContainerId]
-  );
-  const getNavPanel = useCallback(
-    () => (navPanelId ? document.getElementById(navPanelId) : null),
-    [navPanelId]
-  );
-  const getSectionElement = useCallback((id: string) => {
-    return document.getElementById(id);
-  }, []);
 
   useEffect(() => {
-    const container = getContainer();
+    const container = document.getElementById(scrollContainerId);
     if (!container) return;
 
     // Setup IntersectionObserver
     const observer = new IntersectionObserver(handleIntersection, {
       root: container,
       threshold: 0,
-      rootMargin: "0px 0px -80% 0px",
+      rootMargin: "0px 0px -70% 0px"
     });
 
     sectionIds.forEach((id) => {
-      const el = getSectionElement(id);
-      if (el) observer.observe(el);
-    });
+      const section = document.getElementById(id);
+    if (section) observer.observe(section);
+  });
 
     return () => {
       observer.disconnect();
     };
   }, [
     sectionIds,
-    getContainer,
-    getNavPanel,
-    getSectionElement,
     handleIntersection,
+    scrollContainerId
   ]);
 
   return activeSection;

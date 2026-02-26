@@ -42,7 +42,7 @@ h3 {
 
 #content {
   width: 60%;
-  padding: 2rem;
+  padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;

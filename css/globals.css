@@ -20,9 +20,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   background: rgb(var(--background));

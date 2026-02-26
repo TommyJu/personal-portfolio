@@ -9,14 +9,12 @@ const SECTION_IDS = [
   "projects",
 ];
 const SCROLL_CONTAINER_ID = "scrollable-container";
-const NAV_PANEL_ID = "navigation-panel";
 
 // Nav component that responds to the current section being viewed in a scrollable container
 export default function Nav() {
   const activeSection = useScrollSpy(
     SECTION_IDS,
     SCROLL_CONTAINER_ID,
-    NAV_PANEL_ID
   );
   
   return (
