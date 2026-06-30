@@ -9,12 +9,21 @@ interface ProjectEntry {
 
 const projectData: ProjectEntry[] = [
   {
+    title: "Simple Budget",
+    description:
+      "Simple Budget is a full-stack budgeting application built as both a SQL learning project and a lightweight personal finance tool.",
+    date: "Jun 2026",
+    imageSrc: "/project-images/simple_budget.png",
+    tags: ["PostgreSQL", "Express.js", "React", "Node.js", "REST API", "JWT Auth", "Database Design"],
+    href: "https://simplebudget-sync.onrender.com/",
+  },
+  {
     title: "Relay",
     description:
       "Relay is a real-time messaging application built using the MERN stack and web sockets. ",
     date: "Jan 2026",
     imageSrc: "/project-images/relay.png",
-    tags: ["Web Sockets", "MongoDB", "Express.js", "React", "Node.js"],
+    tags: ["WebSockets", "MongoDB", "Express.js", "React", "Node.js", "JWT Auth"],
     href: "https://relay.azurewebsites.net/",
   },
   {
