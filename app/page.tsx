@@ -10,6 +10,7 @@ import educationData from "@/data/education";
 import workExperienceData from "@/data/workExperience";
 import projectData from "@/data/projects";
 import { aboutMeParagraphs, aboutMeShortSummary } from "@/data/aboutMe";
+import Image from "next/image";
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -29,6 +30,13 @@ export default function Home() {
     >
       <section id="navigation-panel">
         <div>
+          <Image
+            src="/headshot.jpeg"
+            alt="Portrait of Tommy Ju"
+            width={200}
+            height={200}
+            className="mb-4 rounded-full object-cover"
+          />
           <h1>Tommy Ju</h1>
           <h2>
             Software Developer based in{" "}
@@ -44,7 +52,7 @@ export default function Home() {
 
       <section id="content">
         <section id="about">
-            <h3>About</h3>
+          <h3>About</h3>
           <div className="about-me-text-wrapper">
             {aboutMeParagraphs.map((p, i) => (
               <p key={i}>{p}</p>

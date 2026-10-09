@@ -1,9 +1,7 @@
 export const aboutMeParagraphs: string[] = [
-  "I’m a recent graduate from BCIT who is eager to start my career in software development. I am a reliable and detail-oriented software developer who enjoys working with others and making each project better than the last. I care about the things that I build, and the people I work with.",
-  "My strengths are debugging, organization, patience, and being a team player.",
-  "I am someone who takes an iterative approach to building software and personal growth, by learning from past mistakes and challenges.",
-  "I am naturally curious and a lifetime learner. One reason why I enjoy software development is because I’m always learning something new with each project. It’s satisfying connecting the dots with the knowledge you’ve built over time.",
-  "When I’m not coding you can find me exploring British Columbia on my bike or training for my next race. I approach coding the same way I approach my training—consistent and sustainable practice with a focus on long-term growth.",
+  "I am a reliable and detail-oriented software developer who enjoys working with others and improving at my craft. I care about the things that I build and the people I work with. I am naturally curious and a lifelong learner.",
+  "I enjoy building software because I find myself losing track of time and becoming immersed in my work. I find it satisfying to build my knowledge one brick at a time. There's no better feeling than tackling a challenge and realizing how far you've come.",
+  "When I’m not coding you can find me riding my bike. I approach coding the same way I approach cycling: Consistent and deliberate practice with a focus on long-term growth.",
 ];
 
-export const aboutMeShortSummary: string = "I'm passionate about building web applications that make people's lives easier.";
+export const aboutMeShortSummary: string = "I love to build software that makes people's lives easier, provides value to businesses, and shapes our digital infrastructure.";

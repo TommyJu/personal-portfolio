@@ -9,6 +9,19 @@ interface ProjectEntry {
 
 const projectData: ProjectEntry[] = [
   {
+    title: "DevLog",
+    description:
+      "DevLog is a terminal-based time tracker built for developers. Track time spent coding, debugging, learning, and working on projects. Record session notes and monitor your daily, weekly, monthly, and all-time development hours.",
+    date: "Oct 2026",
+    imageSrc: "/project-images/devlog.png",
+    tags: [
+      "Python",
+      "curses",
+      "openpyxl",
+    ],
+    href: "https://github.com/TommyJu/devlog",
+  },
+  {
     title: "Tekin Drainage",
     description:
       "A modern business landing page built for a local plumbing company. Designed to improve online presence with a fast, responsive, and professional website.",

@@ -12,7 +12,7 @@ const workExperienceData: WorkExperienceEntry[] = [
         title: "Automotive Detailing Agent",
         secondaryTitle: "West Coast Car Rentals",
         description: "Inspected, detailed, and transported rental vehicles while helping ensure a smooth customer experience.",
-        date: "Mar 2026 - Present",
+        date: "Mar 2026 - Oct 2026",
         imageSrc: "/work-experience-images/west_coast.png",
         href: "https://www.westcoastcarrentals.com/"
     },
