@@ -11,6 +11,8 @@ import workExperienceData from "@/data/workExperience";
 import projectData from "@/data/projects";
 import { aboutMeParagraphs, aboutMeShortSummary } from "@/data/aboutMe";
 import Image from "next/image";
+import RubberDuck from "@/components/RubberDuck";
+
 
 export default function Home() {
   const [visible, setVisible] = useState(false);
@@ -52,7 +54,7 @@ export default function Home() {
 
       <section id="content">
         <section id="about">
-          <h3>About</h3>
+          <h3>About Me</h3>
           <div className="about-me-text-wrapper">
             {aboutMeParagraphs.map((p, i) => (
               <p key={i}>{p}</p>
@@ -77,6 +79,7 @@ export default function Home() {
             <Card key={data.title} {...data} />
           ))}
         </section>
+        <RubberDuck />
       </section>
     </main>
   );
